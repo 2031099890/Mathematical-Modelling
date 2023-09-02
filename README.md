@@ -1,1 +1,3 @@
-# Mathematical-Modelling
+本项目文件夹均为数学建模常用模型及算法的Matlab代码，直接调用即可
+Matlab版本为2022b
+今后会陆续上传其他算法
