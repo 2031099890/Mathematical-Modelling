@@ -7,7 +7,7 @@
 clc
 clear all
 
-A = xlread('自己的数据目录','B3:|17');
+A = xlread('自己的数据目录','B3:I17');
 % 得到的数据矩阵的行数和列数
 a = size(A, 1);
 b = size(A, 2);
@@ -54,6 +54,7 @@ for i = 1:a
 end
 
 result_report = [new_score, total_score];  % 将主成分得分和总分放到同一个矩阵中  
+
 % 输出模型及结果报告
 disp('特征值及其贡献率，累计贡献率：')
 disp(DS)
