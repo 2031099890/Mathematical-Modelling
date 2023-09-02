@@ -1,8 +1,8 @@
 %% K-means聚类
 % Idx是数据点属于哪个类的标记，Center是每个类的中心位置
 % X是全部二维数据点，xstart是类的初始中心位置
-clc 
-clear 
+
+function [Idx, Center] = K_means(X, xstart)
 
 len = length(X);  % X中的数据点个数
 Idx = zeros(len, 1);  % 每个数据点的Id，即属于哪个类
@@ -13,7 +13,7 @@ C3 = xstart(3, :);  % 第3类的中心位置
 for i_for = 1:100
     for i = 1:len
         x_temp = X(i, :);  % 提取出单个数据点
-        dl = norm(x_temp-C1);  % 与第1个类的距离
+        d1 = norm(x_temp-C1);  % 与第1个类的距离
         d2 = norm(x_temp-C2);  % 与第2个类的距离
         d3 = norm(x_temp-C3);  % 与第3个类的距离
         d = [d1;
@@ -35,6 +35,3 @@ end
 Center = [C1;
           C2;
           C3];  % 类的中心位置
-
-
-
